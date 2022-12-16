@@ -26,6 +26,13 @@ function getBalance(statement) {
   }, 0);
   return balance;
 }
+
+app.get("/", (request, response) => {
+  return response.json({
+    message: "API financeira is working ok!",
+  });
+});
+
 app.post("/account", (request, response) => {
   const { cpf, name } = request.body;
   const customerAlreadyExists = customers.some(
@@ -106,4 +113,7 @@ app.get("/balance", verifyExistsAccountCPF, (request, response) => {
 
   return response.json(balance);
 });
-app.listen(3333);
+
+app.listen(3333, () => {
+  console.log("Server is running on http://localhost:3333");
+});
