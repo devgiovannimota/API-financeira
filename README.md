@@ -1,6 +1,6 @@
 # API Financeira com NodeJS
 
-## 🪧 Sobre
+## 🧧 Sobre
 
 API Financeira desenvolvida em **NodeJS** com o framework **Express**.
 
